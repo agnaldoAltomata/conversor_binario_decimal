@@ -1,0 +1,46 @@
+html{
+    background-color: rgb(109, 160, 155);
+}
+div{
+    width: 600px;
+    height: 500px;
+    margin-left: 400px;
+    background-color: wheat;
+    border-radius: 360px;
+}
+input{
+    margin-left: 25%;
+    height: 40px;
+}
+input:hover{
+    background-color: lemonchiffon;
+}
+button{
+    width: 250px;
+    height: 45px;
+    margin-left: 2%;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: lemonchiffon;
+}
+h3{
+    margin-left: 30%;
+    padding-top: 10%;
+}
+.desimal{
+    margin-left: 45%;
+    padding-top: 10%;
+    font-size: 50px;
+}
+p{
+    margin-left: 25%;
+    padding-top: 1px;
+}
+h3,p{
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(10, 10, 10);
+}

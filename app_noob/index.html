@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversor binario em decimal</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div>
+        <h3>conversor binario</h3>
+        <p>insira 8 digitos binario</p>
+        
+        <input type="text" name="binario" size="8"/>
+        <button  name="converso">converso</button>
+        <p class="desimal"></p>
+    </div>
+    <script>
+        
+       let binario = document.getElementsByName("binario");
+       let desimal = document.getElementsByTagName("p");
+       
+       document.getElementsByTagName("button")[0].onclick=function(){
+            let bn = new String(binario[0].value);
+        
+            if(bn.match(/^[0-1]+$/g) == null){
+                alert("informe um numero binario 0 ou 1");
+            }else{
+                desimal[1].innerHTML=converte(bn);
+            }
+       }
+       function converte(bn){
+            var dec=0;
+            for (let index = bn.length-1; index >= 0; index--) {
+                dec += parseInt(bn[index]*Math.pow(2,bn.length-1-index));   
+            }
+            return dec;
+       }
+    </script>
+</body>
+</html>
