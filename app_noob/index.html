@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conversor binario em decimal</title>
+    <title>conversor binario</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -12,13 +12,13 @@
         <p>insira numeros binarios</p>
         
         <input type="text" name="binario" size="8"/>
-        <button  name="converso">converso</button>
+        <button  name="converso">converter</button>
         <p class="desimal"></p>
     </div>
     <script>
         
        let binario = document.getElementsByName("binario");
-       let desimal = document.getElementsByTagName("p");
+       let decimal = document.getElementsByTagName("p");
        
        document.getElementsByTagName("button")[0].onclick=function(){
             let bn = new String(binario[0].value);
@@ -26,7 +26,8 @@
             if(bn.match(/^[0-1]+$/g) == null){
                 alert("informe um numero binario 0 ou 1");
             }else{
-                desimal[1].innerHTML=converte(bn);
+                decimal[1].innerHTML=converte(bn);
+                binario[0].value='';
             }
        }
        function converte(bn){
